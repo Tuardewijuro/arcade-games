@@ -74,14 +74,13 @@ button {
 }
 
 .preview {
-    background-color: rgba(0, 255, 0, 0.5);  /* Verde semitransparente para la vista previa válida */
+    background-color: rgba(0, 255, 0, 0.5);  
 }
 
 .preview-invalid {
-    background-color: rgba(255, 0, 0, 0.5);  /* Rojo semitransparente para la vista previa inválida */
+    background-color: rgba(255, 0, 0, 0.5); 
 }
 
-/* Nuevo estilo para el botón de orientación */
 #boton-orientacion {
     margin-top: 10px;
     padding: 8px 16px;
@@ -90,9 +89,9 @@ button {
 }
 
 .acierto {
-    background-color: red;  /* Rojo para los golpes en barcos */
+    background-color: red;  
 }
 
 .agua {
-    background-color: grey;  /* Gris para los ataques fallidos */
+    background-color: grey;  
 }
