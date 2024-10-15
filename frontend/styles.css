@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(70, 64, 64);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #ffffff;
+}
+p {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.game-button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #08af32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.game-button:hover {
+    background-color: #0a5700;
+}
+.game-button i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+#registro-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#modal-registro {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#lista-jugadores {
+    margin-top: 20px;
+    list-style-type: none;
+}

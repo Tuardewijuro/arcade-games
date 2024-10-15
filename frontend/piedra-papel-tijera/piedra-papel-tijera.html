@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="piedra-papel-tijera.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+        <p>Elige una opción:</p>
+
+        <div id="game-options">
+            <button id="piedra" class="game-button">
+                <img src="images/piedra.png" alt="Piedra" class="game-img">
+            </button>
+            <button id="papel" class="game-button">
+                <img src="images/papel.png" alt="Papel" class="game-img">
+            </button>
+            <button id="tijera" class="game-button">
+                <img src="images/tijeras.png" alt="Tijera" class="game-img">
+            </button>
+        </div>
+
+        <div id="result" style="display: none;">
+            <p>Tu elección:</p>
+            <p class="choice-text"><span id="user-choice-img"></span></p>
+            
+            <p>Elección del oponente:</p>
+            <p class="choice-text"><span id="opponent-choice-img"></span></p>
+            
+            <h2 id="game-result"></h2>
+        </div>
+
+        <button id="restart" style="display: none;">Jugar de nuevo</button>
+    </div>
+
+    <script src="piedra-papel-tijera.js"></script>
+</body>
+</html>

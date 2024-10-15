@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Bienvenido a Arcade Colombia!</h1>
+        <p>Selecciona un juego para comenzar:</p>
+
+        <!-- Botones para seleccionar el juego -->
+        <button class="game-button" onclick="location.href='piedra-papel-tijera/piedra-papel-tijera.html'">
+            <i class="fas fa-hand-rock"></i> Piedra, Papel y Tijera
+        </button>
+        <button class="game-button" onclick="location.href='ahorcado/ahorcado.html'">
+            <i class="fas fa-skull"></i> Ahorcado
+        </button>
+        <button class="game-button" onclick="location.href='astucia-naval/astucia-naval.html'">
+            <i class="fas fa-ship"></i> Astucia Naval
+        </button>
+
+        <h2>Jugadores con el puntaje más alto</h2>
+    <ul id="lista-jugadores"></ul>
+
+    <!-- Modal para el registro -->
+    <div id="modal-registro" style="display: none;">
+        <label for="nombre-jugador">Ingresa tu nombre:</label>
+        <input type="text" id="nombre-jugador">
+        <button id="guardar-jugador">Guardar</button>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

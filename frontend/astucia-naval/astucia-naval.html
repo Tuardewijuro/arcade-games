@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astucia Naval</title>
+    <link rel="stylesheet" href="astucia-naval.css">
+</head>
+
+<body>
+    <h1>Astucia Naval</h1>
+
+    <h2 id="fase-colocacion">Coloca tus barcos</h2>
+    <div id="barcos-lista">
+        <!-- Aquí se generará la lista de barcos para colocar -->
+    </div>
+
+    <p id="instrucciones-colocacion">Instrucciones:</p>
+    <ul id="lista-instrucciones">
+        <li>Selecciona un barco de la lista.</li>
+        <li>Mueve el ratón sobre tu tablero para ver la vista previa.</li>
+        <li>Cambia la orientación del barco con el botón.</li>
+        <li>Haz clic en el tablero para colocar el barco.</li>
+    </ul>
+
+    <p>Orientación actual: <span id="orientacion-actual">horizontal</span></p>
+    <button id="boton-orientacion">Cambiar Orientación</button>
+
+    <h2>Tu Tablero</h2>
+    <div id="tablero-jugador" class="tablero"></div>
+
+    <!-- Nuevo botón para continuar -->
+    <button id="boton-continuar" disabled>Continuar</button>
+
+    <button id="reiniciar">Reiniciar Juego</button>
+
+    <!-- Fase del juego (ataques) -->
+    <div id="fase-juego" style="display: none;">
+        <h2>Tu Tablero</h2>
+        <div id="tablero-jugador-fase-juego" class="tablero"></div>
+        
+        <h2>Tablero del Oponente</h2>
+        <div id="tablero-oponente" class="tablero"></div>
+    </div>
+
+    <script src="astucia-naval.js"></script>
+</body>
+
+</html>

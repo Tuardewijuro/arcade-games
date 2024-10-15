@@ -1,21 +1,64 @@
-// Controlador para registrar jugador
-exports.registerPlayer = (req, res) => {
-    const { name } = req.body;
-    if (!name) {
-      return res.status(400).json({ error: 'El nombre es obligatorio' });
+const fs = require('fs');
+const path = require('path');
+
+let ultimaPalabra = '';
+
+  exports.piedraPapelTijera = (req, res) => {
+    const { userChoice } = req.body;
+
+    // Opciones disponibles: Piedra, Papel, Tijera
+    const choices = ['piedra', 'papel', 'tijera'];
+
+    // Generar la elección del oponente de forma aleatoria
+    const opponentChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    // Determinar el resultado (Ganaste, Perdiste, Empate)
+    let result;
+
+    if (userChoice === opponentChoice) {
+        result = 'Empate';
+    } else if (
+        (userChoice === 'piedra' && opponentChoice === 'tijera') ||
+        (userChoice === 'papel' && opponentChoice === 'piedra') ||
+        (userChoice === 'tijera' && opponentChoice === 'papel')
+    ) {
+        result = 'Ganaste';
+    } else {
+        result = 'Perdiste';
     }
-  
-    // Simulación de registro en el sistema (por ahora no se guarda en base de datos)
-    return res.status(200).json({ message: `Jugador ${name} registrado con éxito` });
-  };
-  
-  // Controlador para iniciar el juego
-  exports.startGame = (req, res) => {
-    const { gameType } = req.body;
-    if (!gameType || !['piedra-papel-tijera', 'ahorcado', 'astucia-naval'].includes(gameType)) {
-      return res.status(400).json({ error: 'Tipo de juego no válido' });
-    }
-  
-    // Simulación de inicio de juego
-    return res.status(200).json({ message: `Iniciando el juego de ${gameType}` });
-  };
+
+    // Devolver la elección del usuario, la del oponente y el resultado
+    res.json({
+        userChoice,
+        opponentChoice,
+        result
+    });
+};
+
+exports.obtenerPalabraAleatoria = (req, res) => {
+  const filePath = path.join(__dirname, '../data/palabras.json');
+
+  // Leer el archivo palabras.json
+  fs.readFile(filePath, 'utf8', (err, data) => {
+      if (err) {
+          console.error('Error al leer el archivo de palabras:', err);
+          return res.status(500).json({ error: 'Error al obtener la palabra.' });
+      }
+
+      // Parsear el archivo JSON
+      const palabras = JSON.parse(data).palabras;
+
+      let palabraAleatoria = '';
+
+      // Seleccionar una palabra al azar que no sea la última seleccionada
+      do {
+          palabraAleatoria = palabras[Math.floor(Math.random() * palabras.length)];
+      } while (palabraAleatoria === ultimaPalabra);
+
+      // Guardar la nueva palabra como la última seleccionada
+      ultimaPalabra = palabraAleatoria;
+
+      // Devolver la palabra al frontend
+      res.json({ palabra: palabraAleatoria });
+  });
+};

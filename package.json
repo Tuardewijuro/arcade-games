@@ -1,20 +1,22 @@
 {
-  "name": "arcade-colombia",
+  "name": "arcade-games",
   "version": "1.0.0",
+  "description": "API para juegos interactivos como Piedra, Papel o Tijera, Ahorcado y Astucia Naval",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.21.1",
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "fs": "^0.0.1-security",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^2.0.15"
   }
 }

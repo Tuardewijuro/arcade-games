@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="ahorcado.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ahorcado</h1>
+        
+        <!-- Imagen del ahorcado -->
+        <div id="ahorcado-container">
+            <img id="ahorcado-image" src="images/ahorcado_1.png" alt="Ahorcado">
+        </div>
+        
+        <!-- Palabra a adivinar -->
+        <p id="word-display">_ _ _ _ _ _</p>
+
+        <!-- Letras seleccionadas -->
+        <p id="selected-letters"></p>
+
+        <!-- Botones de letras -->
+        <div id="letters-container">
+            <!-- Letras se generarán aquí dinámicamente -->
+        </div>
+
+        <button id="restart-button" style="display:none;">Jugar de nuevo</button>
+    </div>
+
+    <script src="ahorcado.js"></script>
+</body>
+</html>

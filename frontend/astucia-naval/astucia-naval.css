@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#tableros {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.tablero div {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#barcos-lista {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.barco {
+    padding: 10px;
+    border: 2px dashed gray;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.barco.placer {
+    background-color: lightgreen;
+    border-color: green;
+}
+
+#tablero-jugador .barco-portaaviones {
+    background-color: rgb(90, 230, 148);
+}
+
+#tablero-jugador .barco-submarino {
+    background-color: lightcoral;
+}
+
+#tablero-jugador .barco-destructor {
+    background-color: lightgoldenrodyellow;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.preview {
+    background-color: rgba(0, 255, 0, 0.5);  /* Verde semitransparente para la vista previa válida */
+}
+
+.preview-invalid {
+    background-color: rgba(255, 0, 0, 0.5);  /* Rojo semitransparente para la vista previa inválida */
+}
+
+/* Nuevo estilo para el botón de orientación */
+#boton-orientacion {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.acierto {
+    background-color: red;  /* Rojo para los golpes en barcos */
+}
+
+.agua {
+    background-color: grey;  /* Gris para los ataques fallidos */
+}

@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #333;
+}
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+#game-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.game-button img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.game-button img:hover {
+    transform: scale(1.1);
+}
+#result {
+    margin-top: 20px;
+    text-align: center;
+}
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.choice-text {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.piedra {
+    color: #007bff; 
+}
+.papel {
+    color: #ffc107; 
+}
+.tijera {
+    color: #dc3545; 
+}
+.choice-text i {
+    font-size: 24px; 
+}

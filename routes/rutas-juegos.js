@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const gameController = require('../controllers/gameController');
+const gameController = require('../controllers/juegos-controllers');
 
-router.post('/register', gameController.registerPlayer);
-
-router.post('/start', gameController.startGame);
+router.post('/piedra-papel-tijera', gameController.piedraPapelTijera);
+router.get('/palabra-aleatoria', gameController.obtenerPalabraAleatoria);
 
 module.exports = router;
