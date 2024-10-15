@@ -24,3 +24,6 @@ Bienvenido a **Arcade Colombia**, un conjunto de juegos clásicos donde los juga
 
 La aplicación está desplegada en Railway. Se puede acceder mediante el siguiente link:
 https://arcade-games-production.up.railway.app/
+
+Video Explicacion:
+https://youtu.be/gVaPpq8wQ9E
